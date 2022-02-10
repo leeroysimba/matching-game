@@ -152,6 +152,10 @@ int main() {
 			cout << "Rubicon has chosen " << comprow << " " << compcol << ": " << secrets[comprow][compcol] << endl;
 			if (row == comprow && col == compcol) {
 				cout << "It is a match, you and Rubicon have the same fate!" << endl;
+		
+			}
+			else {
+				cout << "Not a match!, you and Rubicon have different elements" << endl;
 			}
 		}
 		{
