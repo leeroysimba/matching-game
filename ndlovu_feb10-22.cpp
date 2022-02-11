@@ -133,6 +133,8 @@ void line4(int row, int col) {
 
 int main() {
 	char x;
+	string data[5][5] = { {"xx", "xx", "xx","xx","xx"},{"xx","xx","xx","xx","xx"},{"xx","xx","xx","xx","xx"},
+						{"xx","xx","xx","xx","xx"},{"xx","xx","xx","xx","xx"} };
 	do {
 		srand(unsigned(time(0)));
 		int comprow = rand() % 5;
@@ -144,6 +146,12 @@ int main() {
 		cin >> row >> col;
 		while ((row > 4 || row < 0) && (col > 4 || col < 0)) {
 			cout << "index out of bounds" << endl;
+			cout << "Below are secrets hidden in each grid, choose one" << endl;
+		for (int a = 0; a < 5; a++) {
+			for (int b = 0; b < 5; b++) {
+				cout << right << setw(5) << data[a][b] << " ";
+
+			}
 			cout << "Please enter the row and column number to unveil a secret about your fate" << endl;
 			cin >> row >> col;
 
